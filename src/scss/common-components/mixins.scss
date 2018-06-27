@@ -1,0 +1,22 @@
+@mixin respond-to-max($value) {
+  @media (max-width: $value) {
+    @content
+  }
+}
+
+@mixin respond-to-min($value) {
+  @media (max-width: $value) {
+    @content
+  }
+}
+
+@mixin flex($justify: flex-start, $align: flex-start, $flow: row nowrap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-flow: $flow;
+}
+
+@mixin font($size, $line-height, $font-weight, $font-family) {
+  font: $size, $line-height, $font-weight, $font-family;
+}
