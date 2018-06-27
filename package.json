@@ -1,0 +1,25 @@
+{
+  "name": "newbie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Grygoryev/newbie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Grygoryev/newbie/issues"
+  },
+  "homepage": "https://github.com/Grygoryev/newbie#readme",
+  "dependencies": {
+    "npm": "^6.1.0"
+  },
+  "devDependencies": {
+    "gulp-4.0.build": "^4.0.0-build.a271520"
+  }
+}
