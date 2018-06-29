@@ -1,6 +1,9 @@
 @import "common-components/buttons";
 @import "common-components/variables";
 @import "common-components/mixins";
+@import "common-components/animations";
 @import "common-components/global";
+
+@import "blocks/popup-menu";
 
 @import "pages/index";

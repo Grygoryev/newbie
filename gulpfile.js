@@ -26,7 +26,13 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
   return gulp.src('src/js/*.js')
       .pipe(debug({title: 'working on'}))
-      .pipe(gulp.dest('dist/css'))
+      .pipe(gulp.dest('dist/js'))
+});
+
+gulp.task('img', function () {
+  return gulp.src('src/img/**/*.*')
+      .pipe(debug({title: 'working on'}))
+      .pipe(gulp.dest('dist/img'))
 });
 
 gulp.task('common-files', function () {
@@ -55,7 +61,7 @@ gulp.task('clean', function () {
   return del('dist');
 });
 
-gulp.task('build', gulp.series('clean', 'pug', 'sass', 'js', 'common-files'));
+gulp.task('build', gulp.series('clean', 'pug', 'sass', 'js', 'img', 'common-files'));
 
 gulp.task('serve', gulp.parallel('watch', 'browser-sync'));
 
