@@ -1,0 +1,10 @@
+extends templates/main-layout
+
+block main
+  .shulte-board
+    .shulte-table-wrap
+      .shulte-table#shulte-table
+        .shulte-table__cell
+    .shulte-board__controllers
+      button.shulte-board__new-board-btn(onclick="addNumbers(shuffleNums(numbers))") Create Table
+      button.shulte-board__new-board-btn(onclick="addNewNums(numbers)") Clear Table
