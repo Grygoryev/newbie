@@ -1,0 +1,55 @@
+.shulte-board {
+  padding: 50px;
+  background-color: #e7e7e7;
+  max-width: 100vw;
+  height: 100vh;
+  width: 100%;
+  border: 1px solid $black;
+  margin: 0 auto;
+
+  @include flex();
+
+  &__controllers {
+    padding: 50px;
+  }
+
+  &__new-board-btn {
+    min-height: 50px;
+    max-width: 150px;
+    width: 100%;
+    border: 0.5px solid $black;
+    margin-bottom: 20px;
+
+    &:hover {
+      background-color: orange;
+    }
+  }
+}
+
+.shulte-table-wrap {
+  border: 1px solid $black;
+  max-width: 500px;
+}
+
+.shulte-table {
+  @include flex(flex-start, flex-start, row wrap);
+
+  max-width: 500px;
+  width: 100%;
+  height: 500px;
+
+  &__cell {
+    @include flex(center, center);
+    @include font(22px, 1, 400);
+
+    width: 20%;
+    height: 20%;
+    color: $black;
+    background-color: $white;
+    border: 0.5px solid $black;
+
+    &:nth-child(2n) {
+      background-color: #e3e3e3;
+    }
+  }
+}
