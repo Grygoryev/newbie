@@ -20,3 +20,13 @@ button, a {
   outline: none;
   display: block;
 }
+
+a {
+  //&:hover,
+  //&:active,
+  &:link,
+  &:visited,
+  &:focus {
+    color: inherit;
+  }
+}

@@ -1,0 +1,53 @@
+.header {
+  @include flex(flex-start, center);
+
+  width: 100%;
+  padding-top: 50px;
+  margin-bottom: 15rem;
+
+  &__btns-wrap {
+    @include flex(flex-start, center);
+
+    margin-left: 70px;
+  }
+}
+
+.logo {
+  @include flex(flex-start, center);
+
+  &__img {
+    width: 60px;
+    margin-right: 15px;
+  }
+
+  &__text {
+    @include font(34px, 1, 300, normal, $fontRaleway);
+
+    color: $white;
+  }
+}
+
+.menu {
+  @include flex();
+
+  margin-left: auto;
+  color: $white;
+
+  &__link {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include font(14px, 1, 300, normal, $fontMonsterrat);
+
+    &:hover {
+      color: #c7b299;
+    }
+  }
+}
+
+.cart-btn {
+  margin-right: 25px;
+}

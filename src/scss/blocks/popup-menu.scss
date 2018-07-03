@@ -67,8 +67,14 @@
     margin: 2px;
     min-height: 100px;
     background: linear-gradient(180deg, #f4f4f4, #a3a3a3);
+    //background: linear-gradient(180deg, rgba($white, 0.65), rgba(lightblue, 0.75));
+    position: relative;
 
     @include flex(center, center, column nowrap);
+
+    &:hover {
+      background: linear-gradient(180deg, rgba($white, 0.65), rgba(lightblue, 0.75));
+    }
   }
 
   &__item-icon {
@@ -77,3 +83,13 @@
   }
 }
 
+.available-mark {
+  width: 7px;
+  height: 7px;
+  background-color: rgba(chartreuse, 0.8);
+  border-radius: 50%;
+
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}

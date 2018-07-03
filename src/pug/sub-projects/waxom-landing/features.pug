@@ -1,0 +1,30 @@
+-
+  var features = [
+    {
+      icon: '../img/waxom-landing/icon-pencil.svg',
+      title: 'Web & App Design',
+      text: ''
+    },
+    {
+      icon: '../img/waxom-landing/dev-icon.svg',
+      title: 'Development',
+      text: ''
+    },
+    {
+      icon: '../img/waxom-landing/customization-icon.svg',
+      title: 'Customization',
+      text: ''
+    },
+    {
+      icon: '../img/waxom-landing/marketing-icon.svg',
+      title: 'Marketing',
+      text: ''
+    }
+  ]
+
+.features
+  for item in features
+    .feature
+      img(src="#{item.icon}").feature__icon
+      .feature__title #{item.title}
+      .feature__text #{item.text}
