@@ -290,7 +290,8 @@ body {
   flex-flow: row wrap; }
 
 .projects__show-more-btn {
-  height: 50px; }
+  height: 50px;
+  margin-bottom: 80px; }
 
 .project-card {
   display: flex;
@@ -365,3 +366,14 @@ body {
     display: block; }
   .project-card_hover .project-card__hover-items {
     display: flex; }
+  .project-card_hover .project-card__description {
+    background-color: #362f2d; }
+    .project-card_hover .project-card__description::after {
+      display: none; }
+  .project-card_hover .project-card__title {
+    color: #fff; }
+  .project-card_hover .project-card__tags {
+    color: #c7b299; }
+
+.video-section {
+  height: 1px; }
