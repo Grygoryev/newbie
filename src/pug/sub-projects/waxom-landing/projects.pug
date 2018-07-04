@@ -1,0 +1,52 @@
+-
+  var projectCards = [
+  { title: 'Claritas Etiam Processus',
+    tags: 'Photography, Nature',
+    img: 'img/waxom-landing/project-photo1.png'
+  },
+  { title: 'Quam Nutamus Farum',
+    tags: 'Graphic Design, Mock-Up',
+    img: 'img/waxom-landing/project-photo6.png'
+  },
+  { title: 'Usus Legentis Videntur',
+    tags: 'Photography, Holiday',
+    img: 'img/waxom-landing/project-photo3.png'
+  },
+  { title: 'Claritas Etiam Processus',
+    tags: 'Photography, Nature',
+    img: 'img/waxom-landing/project-photo4.png'
+  },
+  { title: 'Usus Legentis Videntur',
+    tags: 'Graphic Design, Mock-Up',
+    img: 'img/waxom-landing/project-photo5.png'
+  },
+  { title: 'Quam Nutamus Farum',
+    tags: 'Photography, Nature',
+    img: 'img/waxom-landing/project-photo6.png'
+  }
+  ]
+
+section.projects
+  header.projects__header
+    h2.projects__title Our Latest Projects.
+    h3.projects__sub-title Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+  .projects__main.container
+    .projects__filter-btns
+      .projects__filter-btn.projects__filter-btn_active All
+      .projects__filter-btn Web Design
+      .projects__filter-btn Mobile App
+      .projects__filter-btn Illustration
+      .projects__filter-btn Photography
+    .projects__items
+      for item in projectCards
+        figrure.project-card
+          .project-card__img-wrap
+            img(src=item.img).project-card__img
+            .project-card__img-hover
+          figcaption.project-card__description
+            h3.project-card__title #{item.title}
+            h4.project-card__tags #{item.tags}
+          .project-card__hover-items
+            img(src="img/waxom-landing/i/skrepka-icon.svg").project-card__dwnload-btn
+            img(src="img/waxom-landing/i/lupa-icon.svg").project-card__search-btn
+    .btn-brown.projects__show-more-btn load more

@@ -15,6 +15,7 @@ body,
 h1,
 h2,
 h3,
+h4,
 p,
 span,
 figure {
@@ -50,7 +51,9 @@ body {
   min-height: 100vh;
   background: url("../img/waxom-landing/intro-bg.png") no-repeat;
   position: relative;
-  padding-bottom: 150px; }
+  padding-bottom: 150px;
+  background-attachment: fixed;
+  background-size: 100%; }
 
 .header {
   display: flex;
@@ -228,3 +231,137 @@ body {
     color: #fff; }
     .wordpress-line__btn:visited, .wordpress-line__btn:focus {
       color: #fff; }
+
+.projects__header {
+  margin-bottom: 40px; }
+
+.projects__title {
+  font: 600 normal 30px/1 "Raleway", sans-serif;
+  background-color: #fbfaf8;
+  padding-top: 80px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #555555; }
+
+.projects__sub-title {
+  font: 300 normal 16px/28px "Montserrat", sans-serif;
+  max-width: 770px;
+  margin: 0 auto;
+  text-align: center;
+  color: #8c8c8c; }
+
+.projects__filter-btns {
+  margin: 0 auto 40px;
+  max-width: 600px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row nowrap; }
+
+.projects__filter-btn {
+  border: 1px solid #ebebeb;
+  border-radius: 2px;
+  background-color: transparent;
+  height: 32px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: 10px;
+  color: #8c8c8c;
+  font: 300 normal 14px/21px "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap; }
+  .projects__filter-btn:last-child {
+    margin-right: 0; }
+  .projects__filter-btn_active {
+    background: #c7b299;
+    color: #fff; }
+  .projects__filter-btn:hover {
+    background: #c7b299;
+    color: #fff; }
+
+.projects__items {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-flow: row wrap; }
+
+.projects__show-more-btn {
+  height: 50px; }
+
+.project-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  max-width: 372px;
+  width: 100%;
+  margin-bottom: 30px; }
+  .project-card__img-wrap {
+    display: flex;
+    position: relative; }
+  .project-card__img-hover {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); }
+  .project-card__description {
+    background-color: #fbfaf8;
+    padding: 30px;
+    width: 100%;
+    position: relative; }
+    .project-card__description:after {
+      content: '';
+      width: 25px;
+      height: 25px;
+      background-color: #fbfaf8;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      position: absolute;
+      top: -5px;
+      left: 15px; }
+  .project-card__title {
+    color: #cab79f;
+    margin-bottom: 10px;
+    font: 300 normal 20px/1 "Raleway", sans-serif; }
+  .project-card__tags {
+    color: #d1d1d1;
+    font: 300 normal 14px/1 "Montserrat", sans-serif; }
+  .project-card__hover-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+    width: 70px;
+    display: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+    .project-card__hover-items img {
+      cursor: pointer; }
+      .project-card__hover-items img:hover {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+        transition: -webkit-transform .25s;
+        transition: transform .25s;
+        transition: transform .25s, -webkit-transform .25s; }
+
+.project-card_hover {
+  position: relative;
+  overflow: hidden; }
+  .project-card_hover .project-card__img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s, -webkit-transform .4s; }
+  .project-card_hover .project-card__img-hover {
+    display: block; }
+  .project-card_hover .project-card__hover-items {
+    display: flex; }
