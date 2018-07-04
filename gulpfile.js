@@ -30,7 +30,7 @@ gulp.task('js', function () {
 });
 
 gulp.task('img', function () {
-  return gulp.src('src/img/**/*.*')
+  return gulp.src('src/img/**/*.*', {since: gulp.lastRun('img')})
       .pipe(debug({title: 'working on'}))
       .pipe(gulp.dest('dist/img'))
 });

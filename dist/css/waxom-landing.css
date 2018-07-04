@@ -42,15 +42,15 @@ body {
 .container {
   max-width: 1240px;
   width: 100%;
-  margin: 0 auto; }
-
-.button {
-  box-sizing: border-box; }
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-left: 10px; }
 
 .header-holder {
   min-height: 100vh;
   background: url("../img/waxom-landing/intro-bg.png") no-repeat;
-  position: relative; }
+  position: relative;
+  padding-bottom: 150px; }
 
 .header {
   display: flex;
@@ -142,4 +142,89 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   flex-flow: row nowrap;
-  width: 100%; }
+  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 80px; }
+
+.feature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  max-width: 271px;
+  width: 100%;
+  position: relative; }
+  .feature__icon-wrap {
+    height: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap; }
+  .feature__title {
+    font: 600 normal 22px/1 "Raleway", sans-serif;
+    margin-bottom: 20px;
+    margin-top: auto; }
+  .feature__text {
+    font: 300 normal 14px/24px "Montserrat", sans-serif;
+    text-align: center; }
+  .feature__indicator {
+    background-color: #f1eee9;
+    width: 70px;
+    height: 3px;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+
+.feature:hover .feature__icon {
+  flood-color: #c7b299; }
+
+.feature:hover .feature__title {
+  color: #c7b299; }
+
+.feature:hover .feature__indicator {
+  background-color: #c7b299; }
+
+.promo {
+  background-color: #fbfaf8;
+  padding-top: 100px; }
+  .promo__header {
+    max-width: 780px;
+    margin: 0 auto 50px; }
+  .promo__title {
+    font: 600 normal 30px/1 "Raleway", sans-serif;
+    margin-bottom: 30px;
+    text-align: center; }
+  .promo__sub-title {
+    font: 300 normal 16px/28px "Montserrat", sans-serif;
+    text-align: center; }
+  .promo__desktops-img {
+    width: 100%;
+    position: relative;
+    bottom: -4px; }
+
+.wordpress-line {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  background: linear-gradient(90deg, #000, #4e3427); }
+  .wordpress-line__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row nowrap; }
+  .wordpress-line__title {
+    font: 300 normal 28px/1 "Raleway", sans-serif;
+    color: #fff;
+    margin-bottom: 10px; }
+    .wordpress-line__title span {
+      color: #c7b299; }
+  .wordpress-line__sub-title {
+    font: 300 normal 18px/1 "Montserrat", sans-serif;
+    color: #615855; }
+  .wordpress-line__btn {
+    margin-right: 30px;
+    color: #fff; }
+    .wordpress-line__btn:visited, .wordpress-line__btn:focus {
+      color: #fff; }

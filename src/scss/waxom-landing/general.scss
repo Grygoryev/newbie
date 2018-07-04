@@ -15,14 +15,13 @@ body {
   max-width: 1240px;
   width: 100%;
   margin: 0 auto;
-}
-
-.button {
-  box-sizing: border-box;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .header-holder {
   min-height: 100vh;
   background: url("../img/waxom-landing/intro-bg.png") no-repeat;
   position: relative;
+  padding-bottom: 150px;
 }

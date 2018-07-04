@@ -1,3 +1,5 @@
+'use strict';
+
 var numbers = [],
     board = $('.shulte-table'),
     cell = $('.shulte-table__cell');
@@ -41,9 +43,3 @@ console.log(numbers);
 console.log(shuffleNums(numbers));
 
 addNumbers(shuffleNums(numbers));
-
-var names = 'Маша, Петя, Марина, Василий';
-
-var arr = names.split(', ');
-
-console.log(arr);
