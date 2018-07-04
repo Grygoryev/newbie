@@ -1,0 +1,66 @@
+.promo {
+  background-color: #fbfaf8;
+  padding-top: 100px;
+
+  &__header {
+    max-width: 780px;
+    margin: 0 auto 50px;
+  }
+
+  &__title {
+    @include font(30px, 1, 600, normal, $fontRaleway);
+
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__sub-title {
+    @include font(16px, 28px, 300, normal, $fontMonsterrat);
+
+    text-align: center;
+  }
+
+  &__desktops-img {
+    width: 100%;
+    position: relative;
+    bottom: -4px;
+  }
+}
+
+.wordpress-line {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  background: linear-gradient(90deg, $black, #4e3427);
+
+  &__wrap {
+    @include flex(space-between);
+  }
+
+  &__title {
+    @include font(28px, 1, 300, normal, $fontRaleway);
+
+    color: $white;
+    margin-bottom: 10px;
+
+    span {
+      color: #c7b299;
+    }
+  }
+
+  &__sub-title {
+    @include font(18px, 1, 300, normal, $fontMonsterrat);
+
+    color: #615855;
+  }
+
+  &__btn {
+    margin-right: 30px;
+    color: $white;
+
+    &:visited,
+    &:focus {
+      color: $white;
+    }
+  }
+}
+
