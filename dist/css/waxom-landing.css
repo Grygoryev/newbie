@@ -1,0 +1,145 @@
+@-webkit-keyframes sheen {
+  100% {
+    -webkit-transform: rotateZ(90deg) translate(1em, -9em);
+            transform: rotateZ(90deg) translate(1em, -9em); } }
+
+@keyframes sheen {
+  100% {
+    -webkit-transform: rotateZ(90deg) translate(1em, -9em);
+            transform: rotateZ(90deg) translate(1em, -9em); } }
+
+* {
+  box-sizing: border-box; }
+
+body,
+h1,
+h2,
+h3,
+p,
+span,
+figure {
+  padding: 0;
+  margin: 0; }
+
+button, a {
+  box-shadow: none;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  display: block; }
+
+a:link, a:visited, a:focus {
+  color: inherit; }
+
+body {
+  box-shadow: 0 0 5px 3px #000; }
+
+.box {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto; }
+
+.container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto; }
+
+.button {
+  box-sizing: border-box; }
+
+.header-holder {
+  min-height: 100vh;
+  background: url("../img/waxom-landing/intro-bg.png") no-repeat;
+  position: relative; }
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 100%;
+  padding-top: 50px;
+  margin-bottom: 15rem; }
+  .header__btns-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row nowrap;
+    margin-left: 70px; }
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row nowrap; }
+  .logo__img {
+    width: 60px;
+    margin-right: 15px; }
+  .logo__text {
+    font: 300 normal 34px/1 "Raleway", sans-serif;
+    color: #fff; }
+
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: row nowrap;
+  margin-left: auto;
+  color: #fff; }
+  .menu__link {
+    margin-right: 30px;
+    font: 300 normal 14px/1 "Montserrat", sans-serif; }
+    .menu__link:last-child {
+      margin-right: 0; }
+    .menu__link:hover {
+      color: #c7b299; }
+
+.cart-btn {
+  margin-right: 25px; }
+
+.intro {
+  max-width: 595px;
+  margin: 0 auto; }
+  .intro__title {
+    font: 300 normal 36px/1 "Raleway", sans-serif;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px; }
+    .intro__title_bold {
+      font-weight: 800;
+      font-size: 52px; }
+  .intro__sub-title {
+    font: 300 normal 16px/24px "Montserrat", sans-serif;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 60px; }
+
+.btn-brown {
+  background-color: #998675;
+  max-width: 170px;
+  height: 52px;
+  width: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 auto;
+  cursor: pointer;
+  border-bottom: 3px solid #736357;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  font: 800 normal 14px/23px "Raleway", sans-serif; }
+  .btn-brown:active {
+    background-color: #736357;
+    border-bottom-color: #4a3d33;
+    -webkit-transform: scale(0.99);
+            transform: scale(0.99); }
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-flow: row nowrap;
+  width: 100%; }

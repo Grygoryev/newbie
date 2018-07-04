@@ -1,0 +1,28 @@
+$fontMonsterrat: 'Montserrat', sans-serif;
+$fontRaleway: 'Raleway', sans-serif;
+
+body {
+  box-shadow: 0 0 5px 3px $black;
+}
+
+.box {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.button {
+  box-sizing: border-box;
+}
+
+.header-holder {
+  min-height: 100vh;
+  background: url("../img/waxom-landing/intro-bg.png") no-repeat;
+  position: relative;
+}

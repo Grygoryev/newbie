@@ -41,3 +41,9 @@ console.log(numbers);
 console.log(shuffleNums(numbers));
 
 addNumbers(shuffleNums(numbers));
+
+var names = 'Маша, Петя, Марина, Василий';
+
+var arr = names.split(', ');
+
+console.log(arr);

@@ -28,6 +28,9 @@ button, a {
   outline: none;
   display: block; }
 
+a:link, a:visited, a:focus {
+  color: inherit; }
+
 .popup {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.4);
@@ -86,13 +89,25 @@ button, a {
     margin: 2px;
     min-height: 100px;
     background: linear-gradient(180deg, #f4f4f4, #a3a3a3);
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap; }
+    .projects__item:hover {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.65), rgba(173, 216, 230, 0.75)); }
   .projects__item-icon {
     max-width: 80px;
     width: 100%; }
+
+.available-mark {
+  width: 7px;
+  height: 7px;
+  background-color: rgba(127, 255, 0, 0.8);
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 5px; }
 
 body {
   background: linear-gradient(180deg, #fcde38, #ffbc08) no-repeat;
