@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box; }
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+figure {
+  padding: 0;
+  margin: 0; }
+
+button, a {
+  box-shadow: none;
+  border: none;
+  text-decoration: none;
+  outline: none;
+  display: block; }
+
+a:link, a:visited, a:focus {
+  color: inherit; }
+
+@font-face {
+  font-family: 'Exo-2';
+  src: url(../assets/fonts/Exo2.0-thin.otf);
+  font-weight: 100; }
+
+body {
+  background: #000; }
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; }
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap; }
+
+.json-header,
+.json-section {
+  background-color: wheat;
+  color: #000; }
+
+.products-catalog {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto; }
+  .products-catalog__title {
+    font: 100 normal 36px/1 "Exo-2", sans-serif;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 31px; }
+  .products-catalog__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap; }
+
+.product-card {
+  max-width: 320px;
+  width: 100%;
+  min-height: 400px;
+  position: relative;
+  color: orange;
+  padding-left: 44px;
+  padding-top: 27px; }
+  .product-card__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    stroke: #1698d9;
+    z-index: -1; }
