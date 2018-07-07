@@ -307,7 +307,7 @@ body {
   .project-card__img-hover {
     display: none;
     position: absolute;
-    width: 100%;
+    width: 100.5%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6); }
   .project-card__description {

@@ -17,6 +17,6 @@
   flex-flow: $flow;
 }
 
-@mixin font($size, $line-height, $font-weight: 400, $font-style: normal, $font-family: $font-family-base) {
+@mixin font($size, $line-height: 1, $font-weight: 400, $font-style: normal, $font-family: $font-family-base) {
   font: $font-weight $font-style #{$size}/#{$line-height $font-family};
 }
