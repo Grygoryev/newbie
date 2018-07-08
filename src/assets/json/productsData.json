@@ -6,7 +6,7 @@
       "taste" : "c фуа-гра",
       "quantity" : "10 порций",
       "bonus" : "мышь в подарок",
-      "isAvailable" : true
+      "available" : true
     },
     {
       "label" : "Сказочное заморское явство",
@@ -14,7 +14,7 @@
       "taste" : "c рыбой",
       "quantity" : "40 порций",
       "bonus" : "2 мыши в подарок",
-      "isAvailable" : true
+      "available" : true
     },
     {
       "label" : "Сказочное заморское явство",
@@ -23,7 +23,7 @@
       "quantity" : "100 порций",
       "bonus" : "5 мышей в подарок",
       "customerState" : "заказчик доволен",
-      "isAvailable" : false
+      "available" : false
     }
   ]
 }

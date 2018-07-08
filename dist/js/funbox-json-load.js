@@ -19,32 +19,46 @@ function showProductsData(jsonObj) {
     var productCard = document.createElement('figure');
     productCard.className = 'product-card';
 
-    var productCardLabel = document.createElement('p');
-    productCardLabel.className = 'product-card__label';
+    var label = document.createElement('p');
+    label.className = 'product-card__label';
 
-    var productCardName = document.createElement('h2');
-    productCardName.className = 'product-card__name';
+    var name = document.createElement('h2');
+    name.className = 'product-card__name';
 
-    var productCardTaste = document.createElement('h3');
-    productCardTaste.className = 'product-card__taste';
+    var taste = document.createElement('h3');
+    taste.className = 'product-card__taste';
 
-    var productCardBonus = document.createElement('p');
-    productCardBonus.className = 'product-card__bonus';
+    var quantity = document.createElement('p');
+    quantity.className = 'product-card__quantity';
 
-    var productCardQuantity = document.createElement('p');
-    productCardQuantity.className = 'product-card__quantity';
+    var bonus = document.createElement('p');
+    bonus.className = 'product-card__bonus';
 
-    productCardLabel.textContent = products[i].label;
-    productCardName.textContent = products[i].name;
-    productCardTaste.textContent = products[i].taste;
-    productCardBonus.textContent = products[i].bonus;
-    productCardQuantity.textContent = products[i].quantity;
+    var customerState = document.createElement('p');
+    customerState.className = 'product-card__customer-state';
 
-    productCard.appendChild(productCardLabel);
-    productCard.appendChild(productCardName);
-    productCard.appendChild(productCardTaste);
-    productCard.appendChild(productCardQuantity);
-    productCard.appendChild(productCardBonus);
+    var available = products[i].available;
+
+    label.textContent = products[i].label;
+    name.textContent = products[i].name;
+    taste.textContent = products[i].taste;
+    quantity.textContent = products[i].quantity;
+    bonus.textContent = products[i].bonus;
+
+    productCard.appendChild(label);
+    productCard.appendChild(name);
+    productCard.appendChild(taste);
+    productCard.appendChild(quantity);
+    productCard.appendChild(bonus);
+
+    if (customerState in products[i]) {
+      productCard.appendChild(customerState)
+    }
+
+    if (available in products[i] === false) {
+      productCard.className = 'product-card product-card_disable';
+    }
+
 
     productCards.appendChild(productCard);
   }
