@@ -44,6 +44,7 @@ function showProductsData(jsonObj) {
     taste.textContent = products[i].taste;
     quantity.textContent = products[i].quantity;
     bonus.textContent = products[i].bonus;
+    customerState.textContent = products[i].customerState;
 
     productCard.appendChild(label);
     productCard.appendChild(name);
@@ -51,7 +52,7 @@ function showProductsData(jsonObj) {
     productCard.appendChild(quantity);
     productCard.appendChild(bonus);
 
-    if (customerState in products[i]) {
+    if ("customerState" in products[i]) {
       productCard.appendChild(customerState)
     }
 
