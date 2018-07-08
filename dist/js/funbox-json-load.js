@@ -55,10 +55,9 @@ function showProductsData(jsonObj) {
       productCard.appendChild(customerState)
     }
 
-    if (available in products[i] === false) {
+    if (available === false) {
       productCard.className = 'product-card product-card_disable';
     }
-
 
     productCards.appendChild(productCard);
   }

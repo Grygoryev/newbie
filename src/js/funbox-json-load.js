@@ -6,7 +6,7 @@ request.responseType = 'json';
 request.send();
 
 request.onload = function() {
-  var products = request.response;
+  var productsData = request.response;
   showProductsData(productsData);
 };
 
@@ -19,22 +19,45 @@ function showProductsData(jsonObj) {
     var productCard = document.createElement('figure');
     productCard.className = 'product-card';
 
-    var productCardLabel = document.createElement('p');
-    productCardLabel.className = 'product-card__label';
+    var label = document.createElement('p');
+    label.className = 'product-card__label';
 
-    var productCardName = document.createElement('h2');
-    productCardName.className = 'product-card__name';
+    var name = document.createElement('h2');
+    name.className = 'product-card__name';
 
-    var productCardTaste = document.createElement('h3');
-    productCardTaste.className = 'product-card__taste';
+    var taste = document.createElement('h3');
+    taste.className = 'product-card__taste';
 
-    productCardLabel.textContent = products[i].label;
-    productCardName.textContent = products[i].name;
-    productCardTaste.textContent = products[i].taste;
+    var quantity = document.createElement('p');
+    quantity.className = 'product-card__quantity';
 
-    productCard.appendChild(productCardLabel);
-    productCard.appendChild(productCardName);
-    productCard.appendChild(productCardTaste);
+    var bonus = document.createElement('p');
+    bonus.className = 'product-card__bonus';
+
+    var customerState = document.createElement('p');
+    customerState.className = 'product-card__customer-state';
+
+    var available = products[i].available;
+
+    label.textContent = products[i].label;
+    name.textContent = products[i].name;
+    taste.textContent = products[i].taste;
+    quantity.textContent = products[i].quantity;
+    bonus.textContent = products[i].bonus;
+
+    productCard.appendChild(label);
+    productCard.appendChild(name);
+    productCard.appendChild(taste);
+    productCard.appendChild(quantity);
+    productCard.appendChild(bonus);
+
+    if (customerState in products[i]) {
+      productCard.appendChild(customerState)
+    }
+
+    if (available === false) {
+      productCard.className = 'product-card product-card_disable';
+    }
 
     productCards.appendChild(productCard);
   }
