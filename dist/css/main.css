@@ -229,11 +229,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: row nowrap;
-    font: 400 normal 22px/1 "Makazi", "Arial", sans-serif;
+    font: 400 normal 24px/1 "Makazi", "Arial", sans-serif;
     width: 20%;
     height: 20%;
     color: #000;
     background-color: #fff;
     border: 0.5px solid #000; }
-    .shulte-table__cell:nth-child(2n) {
-      background-color: #e3e3e3; }

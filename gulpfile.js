@@ -35,9 +35,9 @@ gulp.task('img', function () {
       .pipe(gulp.dest('dist/img'))
 });
 
-gulp.task('common-files', function () {
-  return gulp.src('src/libs/**/**.*')
-      .pipe(gulp.dest('dist/libs'))
+gulp.task('assets', function () {
+  return gulp.src('src/assets/**/**.*')
+      .pipe(gulp.dest('dist/assets'))
 });
 
 gulp.task('browser-sync', function () {
@@ -61,7 +61,7 @@ gulp.task('clean', function () {
   return del('dist');
 });
 
-gulp.task('build', gulp.series('clean', 'pug', 'sass', 'js', 'img', 'common-files'));
+gulp.task('build', gulp.series('clean', gulp.parallel('pug', 'sass', 'js', 'img', 'assets')));
 
 gulp.task('serve', gulp.parallel('watch', 'browser-sync'));
 

@@ -1,0 +1,26 @@
+body {
+  //background: linear-gradient(180deg, $black 40%, rgba($black, 0.5) 60%, $black 60%) no-repeat;
+  background: $black;
+}
+
+$fontExo2: 'Exo-2', sans-serif;
+
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page {
+  @include flex(center, center);
+
+  //height: 100vh;
+    //background: url('../img/funbox-qt/bg.png');
+}
+
+.json-header,
+.json-section {
+  background-color: wheat;
+  color: #000;
+}
