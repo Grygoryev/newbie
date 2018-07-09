@@ -68,11 +68,9 @@ body {
   position: relative;
   color: #000;
   overflow: hidden;
-  background-color: #1698d9;
+  background: linear-gradient(135deg, transparent 30px, #1698d9 0);
   padding: 4px;
-  border-radius: 11px;
-  -webkit-clip-path: polygon(33px 0, 100% 0, 100% 100%, 0% 100%, 0 43px);
-          clip-path: polygon(33px 0, 100% 0, 100% 100%, 0% 100%, 0 43px); }
+  border-radius: 11px; }
 
 .product-card {
   max-width: 320px;
@@ -82,7 +80,7 @@ body {
   overflow: hidden;
   border-radius: 8px;
   padding: 0 0 4px 44px;
-  background: #f2f2f2 url("../img/funbox-qt/cat-funbox.png") 70% 180% no-repeat; }
+  background: url(../img/funbox-qt/cat-funbox.png) 70% 180% no-repeat, linear-gradient(135deg, transparent 30px, #f2f2f2 0); }
   .product-card__header {
     min-height: 43px;
     padding-top: 27px;
