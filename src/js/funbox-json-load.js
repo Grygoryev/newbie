@@ -11,6 +11,8 @@ request.onload = function() {
 };
 
 var productCards = document.querySelector('.products-catalog__body');
+var productCardBg = document.querySelector('.product-card__bg');
+var productCardBgPath = document.querySelector('.product-card__bg-path');
 
 function showProductsData(jsonObj) {
   var products = jsonObj['products'];
@@ -62,4 +64,9 @@ function showProductsData(jsonObj) {
 
     productCards.appendChild(productCard);
   }
+}
+
+function addProductsBG() {
+  productCard.appendChild(productCardBg);
+  productCardBg.appendChild(productCardBgPath);
 }
