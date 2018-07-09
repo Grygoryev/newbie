@@ -43,9 +43,3 @@ console.log(numbers);
 console.log(shuffleNums(numbers));
 
 addNumbers(shuffleNums(numbers));
-
-
-var myJSON = { "name": "Chris", "age": "38" };
-console.log(myJSON);
-var myString = JSON.stringify(myJSON);
-console.log(myString);

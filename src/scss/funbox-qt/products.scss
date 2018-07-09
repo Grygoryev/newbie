@@ -16,98 +16,58 @@
   }
 }
 
-.product-card-wrap {
-  max-width: 325px;
-  width: 100%;
-  min-height: 480px;
-  position: relative;
-  color: $black;
-  overflow: hidden;
-  background: linear-gradient(135deg, transparent 30px, #1698d9 0);
-  padding: 4px;
-  border-radius: 11px;
-
-  //clip-path: polygon(33px 0, 100% 0, 100% 100%, 0% 100%, 0 43px);
-
-}
-
 .product-card {
   max-width: 320px;
   width: 100%;
   position: relative;
-  color: orange;
+  color: $black;
   overflow: hidden;
-  border-radius: 8px;
-  padding: 0 0 4px 44px;
-  background: url(../img/funbox-qt/cat-funbox.png) 70% 180% no-repeat,
-              linear-gradient(135deg, transparent 30px, #f2f2f2 0);
+  background: linear-gradient(135deg, transparent 31px, $colorProductCard 0);
+  padding: 4px;
+  border-radius: 11px;
+  //clip-path: polygon(43px 0, 100% 0, 100% 100%, 0% 100%, 0 43px);
 
-  &__header {
-    //position: relative;
-    min-height: 43px;
-    padding-top: 27px;
-    //border: 4px solid #1698d9;
-    //border-bottom: none;
-    //border-radius: 11px;
-    //border-top-left-radius: 0;
-    //border-bottom-right-radius: 0;
-    //border-bottom-left-radius: 0;
-    //background-color: #f2f2f2;
-    //background-image: linear-gradient(135deg,transparent 0,transparent 31px,#1698d9 31px,#1698d9 100%);
-    //border-left: 0;
-    //width: 320px;
-    //margin-left: 47px;
-    //padding-left: 44px;
-    //padding-top: 24px;
-
-    @include flex(flex-start);
+  &__container {
+    min-height: 480px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    color: $black;
+    padding-left: 45px;
+    background: url(../img/funbox-qt/cat-funbox.png) 70% 180% no-repeat,
+                linear-gradient(135deg, transparent 29px, $colorProductCard-bg 0);
   }
 
-  &__corner-figure {
-    width: 57px;
-    height: 4px;
-    position: absolute;
-    top: 22px;
-    left: -12px;
-    background-color: #1698d9;
-    z-index: 1;
-    transform: rotateZ(-52.5deg);
+  &__header {
+    padding-top: 27px;
+  }
+
+  &__label {
+    @include font(16px, 1, 400, normal, $fontTrebuchet);
+
+    color: $colorGray;
   }
 
   &__body {
-    min-height: 454px;
-    //padding-left: 44px;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    //border: 4px solid #1698d9;
-    //border-top: none;
-    //border-radius: 11px;
-    //border-top-left-radius: 0;
-    //border-top-right-radius: 0;
-    //background-image: url("../img/funbox-qt/cat-funbox.png");
-    //background-position: 70% 200%;
-    //background-repeat: no-repeat;
-    //background-color: #f2f2f2;
   }
 
   &__name {
-
+    @include font(48px, 1, bold, normal, $fontTrebuchet);
   }
 
-  &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+  &__taste {
+    @include font(24px, 1, bold, normal, $fontTrebuchet);
   }
 
-  &__bg-path {
-    stroke: #1698d9;
-    z-index: 5;
-  }
-}
+  &__bonus,
+  &__quantity,
+  &__customer-statement {
+    @include font(14px, 16px, 300, normal, $fontTrebuchet);
 
-.product-card-wrap:hover > svg > path {
-  stroke: red;
+    color: $colorGray;
+  }
 }
