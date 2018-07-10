@@ -24,9 +24,9 @@ gulp.task('sass', function () {
 });
 
 gulp.task('js', function () {
-  return gulp.src('src/js/*.js')
+  return gulp.src('src/js/**/*.js')
       .pipe(debug({title: 'working on'}))
-      .pipe(gulp.dest('dist/js'))
+      .pipe(gulp.dest('dist/js/'))
 });
 
 gulp.task('img', function () {
