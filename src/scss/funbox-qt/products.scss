@@ -12,7 +12,7 @@
   }
 
   &__body {
-    @include flex(space-between, flex-start, row wrap);
+    @include flex(space-between, stretch, row wrap);
   }
 }
 
@@ -26,21 +26,28 @@
   padding: 4px;
   border-radius: 11px;
   //clip-path: polygon(43px 0, 100% 0, 100% 100%, 0% 100%, 0 43px);
+  user-select: none;
 
   &__container {
+    @include flex(flex-start, unset, column nowrap);
+
     min-height: 480px;
     width: 100%;
+    height: 100%;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     color: $black;
-    padding-left: 45px;
-    background: url(../img/funbox-qt/cat-funbox.png) 70% 180% no-repeat,
-                linear-gradient(135deg, transparent 29px, $colorProductCard-bg 0);
+    //padding-left: 45px;
+    background: linear-gradient(135deg, transparent 29px, $colorProductCard-bg 0);
+    //background: url("../img/funbox-qt/cat-funbox.png") 70% 180% no-repeat,
+    //            linear-gradient(135deg, transparent 29px, $colorProductCard-bg 0);
   }
 
   &__header {
     padding-top: 27px;
+    padding-left: 45px;
+    margin-bottom: 10px;
   }
 
   &__label {
@@ -53,14 +60,19 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    padding-left: 45px;
   }
 
   &__name {
     @include font(48px, 1, bold, normal, $fontTrebuchet);
+
+    margin-bottom: 4px;
   }
 
   &__taste {
     @include font(24px, 1, bold, normal, $fontTrebuchet);
+
+    margin-bottom: 11px;
   }
 
   &__bonus,
@@ -69,5 +81,18 @@
     @include font(14px, 16px, 300, normal, $fontTrebuchet);
 
     color: $colorGray;
+  }
+
+  &__footer {
+    min-height: 308px;
+    margin-top: auto;
+    background: url("../img/funbox-qt/cat-funbox.png") no-repeat 64% -87%
+  }
+
+  &__signature {
+    color: $white;
+    position: absolute;
+    bottom: -25px;
+    z-index: 4;
   }
 }
