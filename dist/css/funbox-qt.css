@@ -28,6 +28,18 @@ a:link, a:visited, a:focus {
   font-weight: 100;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Trebuchet-MSC';
+  src: url("../assets/fonts/TrebuchetMS-Bold.ttf") format("ttf");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Trebuchet-MSC';
+  src: url("../assets/fonts/TrebuchetMS-regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   background: #000; }
 
@@ -55,11 +67,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    flex-flow: row wrap; }
+    flex-flow: row wrap;
+    width: 100%; }
 
 .product-card {
-  max-width: 320px;
-  width: 100%;
+  width: 320px;
   position: relative;
   color: #000;
   overflow: hidden;
@@ -76,17 +88,16 @@ body {
     justify-content: flex-start;
     align-items: unset;
     flex-flow: column nowrap;
-    min-height: 480px;
+    min-height: 489px;
     width: 100%;
-    height: 100%;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     color: #000;
     background: linear-gradient(135deg, transparent 29px, #f2f2f2 0); }
   .product-card__header {
-    padding-top: 27px;
-    padding-left: 45px;
+    padding-top: 20px;
+    padding-left: 44px;
     margin-bottom: 10px; }
   .product-card__label {
     font: 400 normal 16px/1 "Trebuchet MS", "Arial", sans-serif;
@@ -94,20 +105,36 @@ body {
   .product-card__body {
     width: 100%;
     overflow: hidden;
-    padding-left: 45px; }
+    padding-left: 44px; }
   .product-card__name {
     font: bold normal 48px/1 "Trebuchet MS", "Arial", sans-serif;
     margin-bottom: 4px; }
   .product-card__taste {
     font: bold normal 24px/1 "Trebuchet MS", "Arial", sans-serif;
-    margin-bottom: 11px; }
-  .product-card__bonus, .product-card__quantity, .product-card__customer-statement {
+    margin-bottom: 17px; }
+  .product-card__bonus, .product-card__quantity, .product-card__customer-state {
     font: 300 normal 14px/16px "Trebuchet MS", "Arial", sans-serif;
     color: #666; }
   .product-card__footer {
-    min-height: 308px;
+    min-height: 300px;
     margin-top: auto;
-    background: url("../img/funbox-qt/cat-funbox.png") no-repeat 64% -87%; }
+    background: url("../img/funbox-qt/cat-funbox.png") no-repeat 49% -52%; }
+  .product-card__weight {
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #1698d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    font: normal normal 42px/38px "Trebuchet MS", "Arial", sans-serif; }
+  .product-card__weight-measure {
+    font: 100 normal 21px/1 "Trebuchet MS", "Arial", sans-serif; }
   .product-card__signature {
     color: #fff;
     position: absolute;

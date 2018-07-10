@@ -13,12 +13,15 @@
 
   &__body {
     @include flex(space-between, stretch, row wrap);
+
+    width: 100%;
   }
 }
 
 .product-card {
-  max-width: 320px;
-  width: 100%;
+  //max-width: 320px;
+  //width: 100%;
+  width: 320px; //fix for issue in safari 9.1.2
   position: relative;
   color: $black;
   overflow: hidden;
@@ -32,22 +35,19 @@
   &__container {
     @include flex(flex-start, unset, column nowrap);
 
-    min-height: 480px;
+    min-height: 489px;
     width: 100%;
-    height: 100%;
+    //height: 100%;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     color: $black;
-    //padding-left: 45px;
     background: linear-gradient(135deg, transparent 29px, $colorProductCard-bg 0);
-    //background: url("../img/funbox-qt/cat-funbox.png") 70% 180% no-repeat,
-    //            linear-gradient(135deg, transparent 29px, $colorProductCard-bg 0);
   }
 
   &__header {
-    padding-top: 27px;
-    padding-left: 45px;
+    padding-top: 20px;
+    padding-left: 44px;
     margin-bottom: 10px;
   }
 
@@ -60,7 +60,7 @@
   &__body {
     width: 100%;
     overflow: hidden;
-    padding-left: 45px;
+    padding-left: 44px;
   }
 
   &__name {
@@ -72,21 +72,39 @@
   &__taste {
     @include font(24px, 1, bold, normal, $fontTrebuchet);
 
-    margin-bottom: 11px;
+    margin-bottom: 17px
   }
 
   &__bonus,
   &__quantity,
-  &__customer-statement {
+  &__customer-state {
     @include font(14px, 16px, 300, normal, $fontTrebuchet);
 
     color: $colorGray;
   }
 
   &__footer {
-    min-height: 308px;
+    min-height: 300px;
     margin-top: auto;
-    background: url("../img/funbox-qt/cat-funbox.png") no-repeat 64% -87%
+    background: url("../img/funbox-qt/cat-funbox.png") no-repeat 49% -52%
+  }
+
+  &__weight {
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+    width: 82px;
+    height: 82px;;
+    border-radius: 50%;
+    color: $white;
+    background-color: $colorProductCard;
+
+    @include flex(center, center, column nowrap);
+    @include font(42px, 38px, normal, normal, $fontTrebuchet);
+  }
+
+  &__weight-measure {
+    @include font(21px, 1, 100, normal, $fontTrebuchet);
   }
 
   &__signature {
