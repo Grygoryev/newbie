@@ -4,9 +4,10 @@
       "label" : "Сказочное заморское явство",
       "name" : "Нямушка",
       "taste" : "c фуа-гра",
-      "quantity" : "<b>10</b> порций",
+      "quantity" : "10 порций",
       "bonus" : "мышь в подарок",
       "weight" : "0.5",
+      "weightMeasure" : "кг",
       "available" : true
     },
     {
@@ -14,17 +15,19 @@
       "name" : "Нямушка",
       "taste" : "c рыбой",
       "quantity" : "40 порций",
-      "bonus" : "<b>2</b> мыши в подарок",
+      "bonus" : "2 мыши в подарок",
       "weight" : "2",
+      "weightMeasure" : "кг",
       "available" : true
     },
     {
       "label" : "Сказочное заморское явство",
       "name" : "Нямушка",
       "taste" : "c курой",
-      "quantity" : "<b>100</b> порций",
-      "bonus" : "<b>5</b> мышей в подарок",
+      "quantity" : "100 порций",
+      "bonus" : "5 мышей в подарок",
       "weight" : "5",
+      "weightMeasure" : "кг",
       "customerState" : "заказчик доволен",
       "available" : false
     }
