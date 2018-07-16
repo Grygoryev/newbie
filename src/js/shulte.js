@@ -35,8 +35,11 @@ function randomNum(max) {
   return Math.round(max - ((max * Math.random())));
 }
 
-function refreshNumbers() {
-  location.reload();
+function refreshNumbers(arr) {
+  var cells = document.getElementsByClassName('shulte-table__cell');
+  for (var i = 0; i < cells.length; i++) {
+    cells[i].textContent = arr[i];
+  }
 }
 
 console.log(numbers);
