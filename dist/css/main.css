@@ -81,6 +81,7 @@ a:link, a:visited, a:focus {
 
 .projects {
   width: 100%;
+  margin-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -89,6 +90,7 @@ a:link, a:visited, a:focus {
     width: calc(30% - 20px);
     margin: 2px;
     min-height: 100px;
+    text-align: center;
     background: linear-gradient(180deg, #f4f4f4, #a3a3a3);
     position: relative;
     display: flex;
@@ -100,6 +102,9 @@ a:link, a:visited, a:focus {
   .projects__item-icon {
     max-width: 80px;
     width: 100%; }
+  .projects__developing-alert {
+    font: 100 normal 16px/1 "Makazi", "Arial", sans-serif;
+    text-align: center; }
 
 .available-mark {
   width: 7px;

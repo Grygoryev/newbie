@@ -59,6 +59,7 @@
 
 .projects {
   width: 100%;
+  margin-bottom: 15px;
 
   @include flex(center, flex-start, row wrap);
 
@@ -66,8 +67,8 @@
     width: calc(30% - 20px);
     margin: 2px;
     min-height: 100px;
+    text-align: center;
     background: linear-gradient(180deg, #f4f4f4, #a3a3a3);
-    //background: linear-gradient(180deg, rgba($white, 0.65), rgba(lightblue, 0.75));
     position: relative;
 
     @include flex(center, center, column nowrap);
@@ -80,6 +81,12 @@
   &__item-icon {
     max-width: 80px;
     width: 100%;
+  }
+
+  &__developing-alert {
+    @include font(16px, 1, 100);
+
+    text-align: center;
   }
 }
 
