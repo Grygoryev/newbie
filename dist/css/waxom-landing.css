@@ -300,7 +300,8 @@ body {
   flex-flow: column nowrap;
   max-width: 372px;
   width: 100%;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  position: relative; }
   .project-card__img-wrap {
     display: flex;
     position: relative; }
