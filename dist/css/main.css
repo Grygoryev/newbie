@@ -1,13 +1,3 @@
-@-webkit-keyframes sheen {
-  100% {
-    -webkit-transform: rotateZ(90deg) translate(1em, -9em);
-            transform: rotateZ(90deg) translate(1em, -9em); } }
-
-@keyframes sheen {
-  100% {
-    -webkit-transform: rotateZ(90deg) translate(1em, -9em);
-            transform: rotateZ(90deg) translate(1em, -9em); } }
-
 * {
   box-sizing: border-box; }
 
@@ -31,6 +21,16 @@ button, a {
 
 a:link, a:visited, a:focus {
   color: inherit; }
+
+@-webkit-keyframes sheen {
+  100% {
+    -webkit-transform: rotateZ(90deg) translate(1em, -9em);
+            transform: rotateZ(90deg) translate(1em, -9em); } }
+
+@keyframes sheen {
+  100% {
+    -webkit-transform: rotateZ(90deg) translate(1em, -9em);
+            transform: rotateZ(90deg) translate(1em, -9em); } }
 
 .popup {
   position: fixed;
@@ -57,24 +57,8 @@ a:link, a:visited, a:focus {
   position: relative; }
 
 .menu__close-btn {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  position: absolute;
   right: 0;
   top: 0; }
-  .menu__close-btn span {
-    position: absolute;
-    top: 50%;
-    height: 2px;
-    width: 17px;
-    background-color: #000; }
-    .menu__close-btn span:first-child {
-      -webkit-transform: rotate(45deg);
-              transform: rotate(45deg); }
-    .menu__close-btn span:last-child {
-      -webkit-transform: rotate(-45deg);
-              transform: rotate(-45deg); }
 
 .menu__title {
   margin-bottom: 10px; }
@@ -114,6 +98,26 @@ a:link, a:visited, a:focus {
   position: absolute;
   top: 5px;
   right: 5px; }
+
+.close-btn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 10px; }
+  .close-btn span {
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    width: 17px;
+    background-color: black; }
+    .close-btn span:first-child {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .close-btn span:last-child {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
 
 body {
   background: linear-gradient(180deg, #fcde38, #ffbc08) no-repeat;
@@ -195,10 +199,7 @@ body {
   visibility: hidden; }
 
 .shulte-page {
-  background-size: 50px 50px;
-  background-color: lightgray;
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent), linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
-  background-repeat: repeat;
+  background: rgba(0, 188, 212, 0.1);
   width: 100%;
   height: 100%;
   min-height: 100vh;
@@ -211,12 +212,8 @@ body {
   padding: 75px 50px 100px;
   max-width: 1100px;
   height: 100%;
-  min-height: 75vh;
   width: 100%;
   margin: 0 auto;
-  background-color: rgba(0, 188, 212, 0.3);
-  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -308,25 +305,6 @@ body {
   .shulte-tutorial__answer {
     font: 300 normal 14px/1.2 "Makazi", "Arial", sans-serif;
     color: rgba(0, 0, 0, 0.6); }
-  .shulte-tutorial__close-btn {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 10px; }
-    .shulte-tutorial__close-btn span {
-      position: absolute;
-      top: 50%;
-      height: 2px;
-      width: 17px;
-      background-color: #000; }
-      .shulte-tutorial__close-btn span:first-child {
-        -webkit-transform: rotate(45deg);
-                transform: rotate(45deg); }
-      .shulte-tutorial__close-btn span:last-child {
-        -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg); }
 
 .shulte-table-wrap {
   position: relative;
@@ -355,7 +333,8 @@ body {
     .shulte-table__cell:nth-child(2n) {
       background-color: #e3e3e3; }
     .shulte-table__cell:hover {
-      box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5); }
+      box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+      z-index: 2; }
 
 .shulte-btn {
   max-width: 120px;
@@ -366,7 +345,8 @@ body {
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 20px;
   margin-right: 10px;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  font-family: "Arial", sans-serif; }
   .shulte-btn:hover {
     background-color: #944343;
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
@@ -377,7 +357,7 @@ body {
             transform: scale(0.95); }
 
 .shulte-btn--main {
-  background-color: rgba(252, 222, 56, 0.75);
+  background-color: rgba(252, 222, 56, 0.85);
   color: #944343; }
   .shulte-btn--main:hover {
     background-color: #fcde38;

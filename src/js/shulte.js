@@ -58,20 +58,10 @@ $(document).ready(function () {
       tutorialAppeared = false;
 
   shulteTutorialOpenBtn.click(function () {
-    if (tutorialAppeared === false) {
-      // shulteTutorialWindow.addClass(slowAppearing);
-      shulteTutorialWindow.addClass('js-show');
-      // shulteTutorialWindow.addClass(slowDisappearing);
-      tutorialAppeared = true;
-    } else {
-      // shulteTutorialWindow.removeClass(slowAppearing);
-      // shulteTutorialWindow.addClass(slowDisappearing);
-      shulteTutorialWindow.removeClass('js-show');
-      tutorialAppeared = false;
-    }
+    shulteTutorialWindow.toggleClass('js-show');
   });
 
   shulteTutorialCloseBtn.click(function () {
-    shulteTutorialWindow.removeClass('js-show');
+    shulteTutorialWindow.toggleClass('js-show');
   });
 });
