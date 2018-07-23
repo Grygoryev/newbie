@@ -194,31 +194,50 @@ body {
 .js-hidden {
   visibility: hidden; }
 
-.shulte-board {
-  padding: 50px;
-  background-color: #e7e7e7;
-  max-width: 100vw;
-  height: 100vh;
+.shulte-page {
+  background-size: 50px 50px;
+  background-color: lightgray;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent), linear-gradient(135deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+  background-repeat: repeat;
   width: 100%;
-  border: 1px solid #000;
-  margin: 0 auto;
+  height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  flex-flow: row nowrap; }
+  align-items: center;
+  flex-flow: column nowrap; }
+
+.shulte-board {
+  padding: 75px 50px 100px;
+  max-width: 1100px;
+  height: 100%;
+  min-height: 75vh;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(0, 188, 212, 0.3);
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap; }
   .shulte-board__controllers {
-    padding: 50px; }
-  .shulte-board__new-board-btn {
-    min-height: 50px;
-    max-width: 150px;
-    width: 100%;
-    border: 0.5px solid #000;
-    margin-bottom: 20px; }
-    .shulte-board__new-board-btn:hover {
-      background-color: orange; }
+    padding: 20px;
+    align-self: center;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap; }
+  .shulte-board__generate-nums-btn {
+    background-color: rgba(252, 222, 56, 0.5); }
 
 .shulte-table-wrap {
-  border: 1px solid #000;
+  position: relative;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
   max-width: 500px; }
 
 .shulte-table {
@@ -234,9 +253,41 @@ body {
     justify-content: center;
     align-items: center;
     flex-flow: row nowrap;
-    font: 400 normal 24px/1 "Makazi", "Arial", sans-serif;
+    font: 400 normal 1.4em/1 "Makazi", "Arial", sans-serif;
     width: 20%;
     height: 20%;
     color: #000;
     background-color: #fff;
-    border: 0.5px solid #000; }
+    border: 1px solid rgba(0, 0, 0, 0.1); }
+    .shulte-table__cell:nth-child(2n) {
+      background-color: #e3e3e3; }
+    .shulte-table__cell:hover {
+      box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+      z-index: 2; }
+
+.shulte-btn {
+  max-width: 120px;
+  min-width: 120px;
+  min-height: 45px;
+  width: 100%;
+  background-color: rgba(148, 67, 67, 0.8);
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 20px;
+  margin-right: 10px;
+  transition: all 0.5s; }
+  .shulte-btn:hover {
+    background-color: #944343;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    border-radius: 2px; }
+  .shulte-btn:active {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
+
+.shulte-btn--main {
+  background-color: rgba(252, 222, 56, 0.75);
+  color: #944343; }
+  .shulte-btn--main:hover {
+    background-color: #fcde38;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    color: #944343; }

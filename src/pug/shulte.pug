@@ -1,9 +1,20 @@
-extends templates/main-layout
+doctype html
 
-block main
+head
+  include head/head
+
+body.shulte-page
+
   .shulte-board
     .shulte-table-wrap
       .shulte-table#shulte-table
         .shulte-table__cell
-    .shulte-board__controllers
-      button.shulte-board__new-board-btn(onclick="refreshNumbers(shuffleNums(numbers))") Generate Table
+      .shulte-board__controllers
+        button.shulte-btn Выбрать размер
+        button.shulte-btn.shulte-btn--main(onclick="refreshNumbers(shuffleNums(numbers))") Новая таблица
+        button.shulte-board__about-btn.shulte-btn Туториал
+
+  script(src="assets/libs/js/jquery-lib.js")
+  script(src="js/waxom-landing.js")
+  script(src="js/shulte.js")
+  script(src="js/init.js")
