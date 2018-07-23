@@ -42,7 +42,4 @@ function refreshNumbers(arr) {
   }
 }
 
-console.log(numbers);
-console.log(shuffleNums(numbers));
-
 addNumbers(shuffleNums(numbers));
