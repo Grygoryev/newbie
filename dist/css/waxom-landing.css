@@ -18,6 +18,33 @@
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
 
+.back-home-btn {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(75, 202, 243, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 0 2px white; }
+  .back-home-btn:hover {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1); }
+  .back-home-btn::after, .back-home-btn::before {
+    content: '';
+    width: 2px;
+    height: 17px;
+    left: 21px;
+    background-color: white;
+    position: absolute; }
+  .back-home-btn::after {
+    top: 10px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .back-home-btn::before {
+    top: 21px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+
 @-webkit-keyframes sheen {
   100% {
     -webkit-transform: rotateZ(90deg) translate(1em, -9em);
