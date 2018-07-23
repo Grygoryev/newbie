@@ -31,18 +31,101 @@
     padding: 20px;
     align-self: center;
     position: absolute;
-    //top: 50%;
-    //right: -40%;
-    //transform: translateY(-50%);
-    //bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
 
     @include flex(center, center, row nowrap);
   }
+}
 
-  &__generate-nums-btn {
-    background-color: rgba(#fcde38, 0.5);
+@keyframes appearing-slightly {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1), translate(-50%, -50%);
+  }
+}
+
+@keyframes disappearing-slightly {
+  0% {
+    opacity: 1;
+    transform: scale(1), translate(-50%, -50%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.slow-appearing {
+  animation-name: appearing-slightly;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+
+.slow-disappearing {
+  animation-name: disappearing-slightly;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+.shulte-tutorial {
+  display: none;
+  opacity: 0;
+  max-width: 700px;
+  width: 100%;
+  //height: 500px;
+  position: absolute;
+  //top: 50%;
+  //left: 50%;
+  //transform: translate(-50%, -50%);
+  background-color: #fbfaf8;
+  padding: 0 30px 30px;
+  box-shadow: 0 0 3px 2px rgba($black, 0.2);
+  border-radius: 1px;
+
+  &__question {
+    @include font(25px, 50px, 300);
+
+    color: #944343;
+    margin-bottom: 20px;
+  }
+
+  &__answer {
+    @include font(14px, 1.2 , 300);
+
+    color: rgba($black, 0.6);
+  }
+
+  &__close-btn {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+
+    span {
+      position: absolute;
+      top: 50%;
+      height: 2px;
+      width: 17px;
+      background-color: $black;
+
+      &:first-child {
+        transform: rotate(45deg);
+      }
+
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
   }
 }
 
@@ -75,7 +158,6 @@
 
     &:hover {
       box-shadow: 0 0 2px 0 rgba($black, 0.5);
-      z-index: 2;
     }
   }
 }
@@ -95,7 +177,7 @@
     background-color: #944343;
     box-shadow: 0 0 5px 1px rgba($black, 0.1);
     color: $white;
-    border-radius: 2px;
+    border-radius: 4px;
   }
 
   &:active {
@@ -112,4 +194,8 @@
     box-shadow: 0 0 5px 1px rgba($black, 0.1);
     color: #944343;
   }
+}
+
+.js-show {
+  display: block;
 }

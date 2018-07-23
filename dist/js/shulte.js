@@ -43,3 +43,35 @@ function refreshNumbers(arr) {
 }
 
 addNumbers(shuffleNums(numbers));
+
+
+//===tutorial popup behaviour=====//
+
+
+$(document).ready(function () {
+
+  var shulteTutorialOpenBtn = $('.shulte-board__about-btn'),
+      shulteTutorialCloseBtn = $('.shulte-tutorial__close-btn'),
+      shulteTutorialWindow = $('.shulte-tutorial'),
+      slowAppearing = 'slow-appearing',
+      slowDisappearing = 'slow-disappearing',
+      tutorialAppeared = false;
+
+  shulteTutorialOpenBtn.click(function () {
+    if (tutorialAppeared === false) {
+      // shulteTutorialWindow.addClass(slowAppearing);
+      shulteTutorialWindow.addClass('js-show');
+      // shulteTutorialWindow.addClass(slowDisappearing);
+      tutorialAppeared = true;
+    } else {
+      // shulteTutorialWindow.removeClass(slowAppearing);
+      // shulteTutorialWindow.addClass(slowDisappearing);
+      shulteTutorialWindow.removeClass('js-show');
+      tutorialAppeared = false;
+    }
+  });
+
+  shulteTutorialCloseBtn.click(function () {
+    shulteTutorialWindow.removeClass('js-show');
+  });
+});
