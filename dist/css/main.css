@@ -65,13 +65,13 @@ a:link, a:visited, a:focus {
 
 .projects {
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-flow: row wrap; }
   .projects__item {
-    width: calc(30% - 20px);
+    min-width: calc(30% - 20px);
     margin: 2px;
     min-height: 100px;
     text-align: center;
@@ -98,6 +98,13 @@ a:link, a:visited, a:focus {
   position: absolute;
   top: 5px;
   right: 5px; }
+
+.sources__link {
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  display: inline-block; }
+  .sources__link:hover {
+    border-bottom: 2px solid red; }
 
 .close-btn {
   width: 20px;
