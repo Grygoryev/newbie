@@ -39,12 +39,12 @@
 
 .projects {
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 
   @include flex(center, flex-start, row wrap);
 
   &__item {
-    width: calc(30% - 20px);
+    min-width: calc(30% - 20px);
     margin: 2px;
     min-height: 100px;
     text-align: center;
@@ -79,4 +79,17 @@
   position: absolute;
   top: 5px;
   right: 5px;
+}
+
+.sources {
+
+  &__link {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+
+    &:hover {
+      border-bottom: 2px solid red;
+    }
+  }
 }
