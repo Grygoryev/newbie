@@ -22,6 +22,18 @@ button, a {
 a:link, a:visited, a:focus {
   color: inherit; }
 
+@font-face {
+  font-family: 'Exo-2';
+  src: url("../assets/fonts/Exo2.0-Thin.otf") format("otf");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'League-gothic';
+  src: url("../assets/fonts/League_Gothict.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
 @-webkit-keyframes sheen {
   100% {
     -webkit-transform: rotateZ(90deg) translate(1em, -9em);
@@ -40,11 +52,12 @@ a:link, a:visited, a:focus {
   height: 100vh;
   top: 0; }
   .popup__container {
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
     background: #fff;
     padding: 25px 30px 50px;
     box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+    border: 3px solid #000;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,7 +65,7 @@ a:link, a:visited, a:focus {
             transform: translate(-50%, -50%); }
 
 .menu__header {
-  font: 400 normal 15px/1 "Makazi", "Arial", sans-serif;
+  font: 400 normal 19px/1 "League-gothic", "Arial", sans-serif;
   margin-bottom: 50px;
   position: relative; }
 
@@ -61,7 +74,9 @@ a:link, a:visited, a:focus {
   top: 0; }
 
 .menu__title {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font: inherit;
+  font-size: 35px; }
 
 .projects {
   width: 100%;
@@ -72,17 +87,23 @@ a:link, a:visited, a:focus {
   flex-flow: row wrap; }
   .projects__item {
     min-width: calc(30% - 20px);
+    padding: 5px;
     margin: 2px;
-    min-height: 100px;
+    min-height: 150px;
     text-align: center;
     background: linear-gradient(180deg, #f4f4f4, #a3a3a3);
+    border: 3px solid blue;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: column nowrap; }
+    flex-flow: column nowrap;
+    font: 400 normal 15px/1 "Makazi", "Arial", sans-serif; }
     .projects__item:hover {
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.65), rgba(173, 216, 230, 0.75)); }
+  .projects__item-title {
+    max-width: 80%;
+    width: 100%; }
   .projects__item-icon {
     max-width: 80px;
     width: 100%; }
@@ -105,6 +126,35 @@ a:link, a:visited, a:focus {
   display: inline-block; }
   .sources__link:hover {
     border-bottom: 2px solid red; }
+
+.tech-icons {
+  min-width: 180px;
+  min-height: 30px;
+  position: absolute;
+  left: 15px;
+  bottom: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row nowrap; }
+  .tech-icons__item {
+    max-width: 35px;
+    width: 100%;
+    min-height: 25px;
+    height: auto;
+    background-repeat: no-repeat; }
+
+.html-icon {
+  background-image: url("../img/icons/html-icon.svg"); }
+
+.css-icon {
+  background-image: url("../img/icons/css3.svg"); }
+
+.react-icon {
+  background-image: url("../img/icons/react-icon.svg"); }
+
+.js-icon {
+  background-image: url("../img/icons/js-icon.svg"); }
 
 .close-btn {
   width: 20px;
