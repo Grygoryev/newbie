@@ -7,11 +7,12 @@
   top: 0;
 
   &__container {
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
     background: $white;
     padding: 25px 30px 50px;
     box-shadow: 0 0 4px 1px rgba($black, 0.3);
+    border: 3px solid $black;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -21,7 +22,7 @@
 
 .menu {
   &__header {
-    @include font(15px, 1, 400);
+    @include font(19px, 1, 400, normal, $fontLeague);
 
     margin-bottom: 50px;
     position: relative;
@@ -34,6 +35,8 @@
 
   &__title {
     margin-bottom: 10px;
+    font: inherit;
+    font-size: 35px;
   }
 }
 
@@ -45,17 +48,25 @@
 
   &__item {
     min-width: calc(30% - 20px);
+    padding: 5px;
     margin: 2px;
-    min-height: 100px;
+    min-height: 150px;
     text-align: center;
     background: linear-gradient(180deg, #f4f4f4, #a3a3a3);
+    border: 3px solid blue;
     position: relative;
 
     @include flex(center, center, column nowrap);
+    @include font(15px, 1, 400, normal);
 
     &:hover {
       background: linear-gradient(180deg, rgba($white, 0.65), rgba(lightblue, 0.75));
     }
+  }
+
+  &__item-title {
+      max-width: 80%;
+      width: 100%;
   }
 
   &__item-icon {
@@ -92,4 +103,38 @@
       border-bottom: 2px solid red;
     }
   }
+}
+
+.tech-icons {
+    min-width: 180px;
+    min-height: 30px;
+    position: absolute;
+    left: 15px;
+    bottom: 5px;
+
+    @include flex(flex-start, center, row nowrap);
+
+    &__item {
+        max-width: 35px;
+        width: 100%;
+        min-height: 25px;
+        height: auto;
+        background-repeat: no-repeat;
+    }
+}
+
+.html-icon {
+    background-image: url("../img/icons/html-icon.svg");
+}
+
+.css-icon {
+    background-image: url("../img/icons/css3.svg");
+}
+
+.react-icon {
+    background-image: url("../img/icons/react-icon.svg");
+}
+
+.js-icon {
+    background-image: url("../img/icons/js-icon.svg");
 }
