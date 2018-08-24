@@ -57,7 +57,7 @@
     position: relative;
 
     @include flex(center, center, column nowrap);
-    @include font(15px, 1, 400, normal);
+    @include font(15px, 1, 400, normal, $fontMuseoSans);
 
     &:hover {
       background: linear-gradient(180deg, rgba($white, 0.65), rgba(lightblue, 0.75));
@@ -67,6 +67,7 @@
   &__item-title {
       max-width: 80%;
       width: 100%;
+      font-family: $fontMuseoSans;
   }
 
   &__item-icon {
