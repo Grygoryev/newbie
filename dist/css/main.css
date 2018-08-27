@@ -57,24 +57,24 @@ a:link, a:visited, a:focus {
             transform: rotateZ(90deg) translate(1em, -9em); } }
 
 .popup {
-  position: fixed;
+  position: absolute;
   background-color: rgba(0, 0, 0, 0.4);
   overflow: hidden;
   width: 100vw;
-  height: 100vh;
-  top: 0; }
+  min-height: 100vh;
+  top: 0;
+  display: -webkit-flexbox;
+  display: flex;
+  -webkit-flex-align: center;
+  align-items: center;
+  justify-content: center; }
   .popup__container {
     max-width: 800px;
     width: 100%;
     background: #fff;
     padding: 25px 30px 50px;
     box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
-    border: 3px solid #000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+    border: 3px solid #000; }
 
 .menu__header {
   font: 400 normal 19px/1 "League-gothic", "Arial", sans-serif;
